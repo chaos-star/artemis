@@ -1,0 +1,62 @@
+[system]
+# rpc port
+rpc_port = 8081
+# web port
+http_port = 8088
+# trusted proxy
+http_trusted_proxy = ["127.0.0.1"]
+# timeout  unit:second
+http_timeout = 60
+# prod、test、debug
+env = "prod"
+
+[log]
+path = "./log"
+name = "%Y-%m-%d.log"
+# 软链接当前最新日志
+link_name = "latest_log"
+# 日志存活周期默认7天,单位天
+max_age = 100
+
+[etcd]
+endpoints = ["127.0.0.1:12379","127.0.0.1:22379","127.0.0.1:32379"]
+username = ""
+password = ""
+timeout = 0
+keep_alive = 10
+keep_alive_timeout = 20
+
+
+[[mysql]]
+alias = "db-alias"
+host = "127.0.0.1:3306"
+username = "root"
+password = "123456"
+database = "db-master"
+[[mysql.slave]]
+host = "127.0.0.1:3306"
+username = "root"
+password = "123456"
+database = "db-slave1"
+[[mysql.slave]]
+host = "127.0.0.1:3306"
+username = "root"
+password = "123456"
+database = "db-slave2"
+
+[[mysql]]
+alias = "db2-alias"
+host = "127.0.0.1:3306"
+username = "root"
+password = "123456"
+database = "db2-master"
+[[mysql.slave]]
+host = "127.0.0.1:3306"
+username = "root"
+password = "123456"
+database = "db2-slave1"
+[[mysql.slave]]
+host = "127.0.0.1:3306"
+username = "root"
+password = "123456"
+database = "db2-slave2"
