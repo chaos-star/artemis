@@ -11,7 +11,7 @@ http_timeout = 60
 env = "debug"
 
 [log]
-path = "./log"
+path = "./logs"
 name = "%Y-%m-%d.log"
 # 软链接当前最新日志
 link_name = "latest_log"

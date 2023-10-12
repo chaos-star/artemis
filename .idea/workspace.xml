@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd3273c-6315-49e3-bdc4-0ac9f2861b26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/App/Middleware/Jwt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Middleware/ResponseLog.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Router/Group/User.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Router/Router.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/Code/Code.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/Response/Response.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Console/Console.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_console.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_http.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_rpc.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Conf/app.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Middleware/ResponseLog.go" beforeDir="false" afterPath="$PROJECT_DIR$/App/Middleware/TraceLog.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Router/Group/User.go" beforeDir="false" afterPath="$PROJECT_DIR$/App/Router/Group/User.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Router/Router.go" beforeDir="false" afterPath="$PROJECT_DIR$/App/Router/Router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Conf/app.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Conf/app.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Console/Console.go" beforeDir="false" afterPath="$PROJECT_DIR$/Console/Console.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_console.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_console.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
