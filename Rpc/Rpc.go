@@ -5,12 +5,13 @@ import (
 	"github.com/chaos-star/marvel/Server"
 )
 
-// {
-// Sd:   &proto.Mailer_ServiceDesc,
-// Ss:   service.NewEmailServer(),
-// Name: "EmailServer",
-// },
-var Services = []Server.ServiceOption{}
+var Services = []Server.ServiceOption{
+	// {
+	// Sd:   &proto.Mailer_ServiceDesc,
+	// Ss:   service.NewEmailServer(),
+	// Name: "EmailServer",
+	// },
+}
 
 func init() {
 	marvel.Server.Load(Services)

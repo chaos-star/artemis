@@ -13,6 +13,9 @@ var SpecCron = map[string]CronJob.SpecJob{
 var CommandName string
 
 func init() {
+
+	marvel.MQ.MqBase.Add(Consumers...)
+	marvel.MQ.MqBase.Run()
 	flag.StringVar(&CommandName, "name", "", "command name")
 	marvel.Cron.JoinJobs(SpecCron)
 }

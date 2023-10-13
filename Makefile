@@ -13,7 +13,11 @@ dict := "${app_name}_${app}"
 .PHONY: run build clean
 
 run:
+ifeq ($(app),console)
+	@$(GO) run $(src) -name start
+else
 	@$(GO) run $(src)
+endif
 build:
 	$(GO) build -o $(dict) -tags $(app)
 clean:
