@@ -1,4 +1,4 @@
-//go:build http
+//go:build web
 
 package main
 

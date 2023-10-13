@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8dd3273c-6315-49e3-bdc4-0ac9f2861b26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Rpc/Rpc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_rpc.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_rpc.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_console.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_cron.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_http.go" beforeDir="false" afterPath="$PROJECT_DIR$/main_web.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go Application" />
         <option value="Go File" />
+        <option value="Go Application" />
       </list>
     </option>
   </component>
@@ -39,7 +40,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
+    "DefaultGoTemplateProperty": "Go Application",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",

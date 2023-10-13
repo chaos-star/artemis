@@ -10,6 +10,7 @@ import (
 
 func main() {
 	flag.Parse()
+
 	CommandName := Console.CommandName
 	if CommandName == "start" {
 		marvel.Cron.Run()
