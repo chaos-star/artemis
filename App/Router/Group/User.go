@@ -1,7 +1,7 @@
 package Group
 
 import (
-	"Artemis/Common/Response"
+	"Artemis/App/Controller"
 	"github.com/gin-gonic/gin"
 )
 
@@ -10,7 +10,5 @@ type User struct {
 
 func (u *User) Router(group *gin.RouterGroup) {
 	x := group.Group("user")
-	x.POST("ping", func(c *gin.Context) {
-		Response.Success(c)
-	})
+	x.POST("ping", Controller.UserController.Example)
 }

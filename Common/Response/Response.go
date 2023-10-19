@@ -2,6 +2,7 @@ package Response
 
 import (
 	"Artemis/Common/Code"
+	"fmt"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -46,10 +47,36 @@ func Fail(code int, c *gin.Context) {
 	c.JSON(http.StatusOK, response)
 }
 
+func FailWithMessage(code int, message string, c *gin.Context) {
+	var response Response
+	response.Code = code
+	response.Message = Code.GetMessage(code)
+	if response.Message != "" {
+		response.Message = fmt.Sprintf("%s:%s", response.Message, message)
+	} else {
+		response.Message = message
+	}
+	response.Data = gin.H{}
+	c.JSON(http.StatusOK, response)
+}
+
 func FailWithData(code int, data interface{}, c *gin.Context) {
 	var response Response
 	response.Code = code
 	response.Message = Code.GetMessage(code)
+	response.Data = data
+	c.JSON(http.StatusOK, response)
+}
+
+func FailWithMessageAndData(code int, message string, data interface{}, c *gin.Context) {
+	var response Response
+	response.Code = code
+	response.Message = Code.GetMessage(code)
+	if response.Message != "" {
+		response.Message = fmt.Sprintf("%s:%s", response.Message, message)
+	} else {
+		response.Message = message
+	}
 	response.Data = data
 	c.JSON(http.StatusOK, response)
 }

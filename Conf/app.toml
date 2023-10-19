@@ -18,6 +18,20 @@ link_name = "latest_log"
 # 日志存活周期默认7天,单位天
 max_age = 100
 
+
+[redis]
+alias = "inst1"
+address = ":6379"
+username = ""
+password = ""
+db = 0
+
+[redis_cluser]
+alias = "redis"
+address = [":7001",":7002",":7003",":7004",":7005",":7006",":7007",":7008"]
+username = ""
+password = ""
+
 [etcd]
 endpoints = ["127.0.0.1:12379","127.0.0.1:22379","127.0.0.1:32379"]
 username = ""

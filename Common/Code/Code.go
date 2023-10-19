@@ -14,10 +14,12 @@ var CodeMap = map[int]string{
 
 func GetMessage(code int) string {
 	var message string
-	if content, ok := CodeMap[code]; ok {
-		message = content
-	} else {
-		message = CodeMap[UnknownError]
+	if code > 0 {
+		if content, ok := CodeMap[code]; ok {
+			message = content
+		} else {
+			message = CodeMap[UnknownError]
+		}
 	}
 	return message
 }
