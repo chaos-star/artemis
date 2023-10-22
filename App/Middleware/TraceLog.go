@@ -1,11 +1,13 @@
 package Middleware
 
 import (
+	"Artemis/Global"
 	"bytes"
 	"encoding/json"
 	"fmt"
 	"github.com/chaos-star/marvel"
 	"github.com/gin-gonic/gin"
+	"github.com/sirupsen/logrus"
 	"io"
 )
 
@@ -19,7 +21,7 @@ func TraceLog() gin.HandlerFunc {
 		reqBody, _ := io.ReadAll(c.Request.Body)
 		reqTpl := fmt.Sprintf("Url: %s | Method:%s | Header:%s | Params:%s", Url, Method, string(Header), string(reqBody))
 		//request log
-		marvel.Logger.Info(fmt.Sprintf("[Api-Request] %s", reqTpl))
+		Global.Log.Info(fmt.Sprintf("[Api-Request] %s", reqTpl))
 		c.Request.Body = io.NopCloser(bytes.NewReader(reqBody))
 		proxy := &responseProxy{ResponseWriter: c.Writer}
 		c.Writer = proxy
@@ -27,6 +29,15 @@ func TraceLog() gin.HandlerFunc {
 		//response log
 		status := proxy.status
 		body := proxy.body
+		if position, has := c.Get("_position_fields"); has {
+			if fields, ok := position.(logrus.Fields); ok {
+				log := Global.Log.GetLogger()
+				log.SetReportCaller(false)
+				Global.Log.WithFields(fields).Info(fmt.Sprintf("[Api-Response] %s, HttpStatus:%d, Response:%s", reqTpl, status, string(body)))
+				log.SetReportCaller(true)
+				return
+			}
+		}
 		marvel.Logger.Info(fmt.Sprintf("[Api-Response] %s, HttpStatus:%d, Response:%s", reqTpl, status, string(body)))
 		// 在控制台中记录响应结果
 	}
