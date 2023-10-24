@@ -3,14 +3,14 @@ module Artemis
 go 1.20
 
 require (
-	github.com/chaos-star/marvel v1.0.8
+	github.com/chaos-star/marvel v1.0.9
 	github.com/gin-gonic/gin v1.9.1
 )
 
 require (
 	github.com/bytedance/sonic v1.10.2 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
-	github.com/chaos-star/queue-mate v1.0.6 // indirect
+	github.com/chaos-star/queue-mate v1.0.7 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
 	github.com/chenzhuoyu/iasm v0.9.0 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect

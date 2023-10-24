@@ -64,6 +64,8 @@ github.com/chaos-star/marvel v1.0.7 h1:/v9dZB5JPmwx4zMCUkYfk4hBRXDtL55YLo9bvT+id
 github.com/chaos-star/marvel v1.0.7/go.mod h1:P7TkD+Yyyr1YWB6UsgrEkou6Z4PZciJ13e7hIcxQJgk=
 github.com/chaos-star/marvel v1.0.8 h1:LgIXMw+SKp0lFH51RzSaz4UzmqAPmKHOkmZqFq2QOWs=
 github.com/chaos-star/marvel v1.0.8/go.mod h1:ulf3koETUkNS3lJi5K6Abf2mv8b/aAr1J5P3CGlxCPY=
+github.com/chaos-star/marvel v1.0.9 h1:+vYnuQMo/0GBfxzSzMwzH9OlL2jrkUaAeNIFZX9msPw=
+github.com/chaos-star/marvel v1.0.9/go.mod h1:RK2iKWpfJwgS8FFEql8gDQIHniDtXpv4jClNSlXoluk=
 github.com/chaos-star/queue-mate v0.0.0-20230919030635-853482cf795a h1:pXw77HDl9A1JyEX+sN5wSgb4hs43wxGeS2vnq3l7l3U=
 github.com/chaos-star/queue-mate v0.0.0-20230919030635-853482cf795a/go.mod h1:NCCgROgxCS9197tcNOrvfFfSJEU6JRIIY+6k0DZClAc=
 github.com/chaos-star/queue-mate v0.0.0-20231013101916-a6c2ea280813 h1:VfuZ7xnpudKvjYfBJnYlOSObtudSORB7gxCZGYYVC6A=
@@ -74,6 +76,8 @@ github.com/chaos-star/queue-mate v1.0.3 h1:9bY0Ny3lS3dZb/gvPN4EjpONZX2SnVg+PiAr6
 github.com/chaos-star/queue-mate v1.0.3/go.mod h1:NCCgROgxCS9197tcNOrvfFfSJEU6JRIIY+6k0DZClAc=
 github.com/chaos-star/queue-mate v1.0.6 h1:VmdaSouWpM/eglt0FPVLRlof4hnEpwNae7HOHQve5AI=
 github.com/chaos-star/queue-mate v1.0.6/go.mod h1:NCCgROgxCS9197tcNOrvfFfSJEU6JRIIY+6k0DZClAc=
+github.com/chaos-star/queue-mate v1.0.7 h1:Ex/LRGaniA7XLHpav3vJiqIZ0Y7PKy0+RxJpleK4t1c=
+github.com/chaos-star/queue-mate v1.0.7/go.mod h1:NCCgROgxCS9197tcNOrvfFfSJEU6JRIIY+6k0DZClAc=
 github.com/chenzhuoyu/base64x v0.0.0-20211019084208-fb5309c8db06/go.mod h1:DH46F32mSOjUmXrMHnKwZdA8wcEefY7UVqBKYGjpdQY=
 github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311/go.mod h1:b583jCggY9gE99b6G5LEC39OIiVsWj+R97kbl5odCEk=
 github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d h1:77cEq6EriyTZ0g/qfRdp61a3Uu/AWrgIq2s0ClJV1g0=
