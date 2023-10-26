@@ -19,9 +19,9 @@ func (ctrl *Controller) Example(c *gin.Context) {
 		return
 	}
 	srv := UserService.New()
-	if ex := srv.Example(params); ex.IsError() {
+	if ex, data := srv.Example(params); ex.IsError() {
 		Response.FailWithException(ex, c)
 	} else {
-		Response.Success(c)
+		Response.SuccessWithData(data, c)
 	}
 }

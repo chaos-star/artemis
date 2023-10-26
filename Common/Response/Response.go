@@ -29,18 +29,29 @@ type ListData struct {
 }
 
 func FailValidate(err error, c *gin.Context) {
-	var errs validator.ValidationErrors
-	errors.As(err, &errs)
-	if trans, ok := c.Get("tran"); ok {
+	var (
+		response Response
+		lang     = GetLanguage(c)
+		message  = ""
+		errs     validator.ValidationErrors
+	)
+	response.Code = Code.ParamsException
+	response.Message = Code.GetMessage(response.Code, lang)
+	response.Data = gin.H{}
+
+	if trans, ok := c.Get("tran"); ok && errors.As(err, &errs) {
 		tranErrs := errs.Translate(trans.(ut.Translator))
-		c.JSON(http.StatusOK, tranErrs)
-		return
+		for _, val := range tranErrs {
+			message = val
+			break
+		}
+	} else {
+		if err != nil {
+			message = err.Error()
+		}
 	}
-	message := ""
-	if err != nil {
-		message = err.Error()
-	}
-	c.JSON(http.StatusOK, message)
+	response.Message = fmt.Sprintf("%s: %s", response.Message, message)
+	c.JSON(http.StatusOK, response)
 }
 
 func GetLanguage(c *gin.Context) string {
