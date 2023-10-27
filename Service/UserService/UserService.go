@@ -3,7 +3,7 @@ package UserService
 import (
 	"Artemis/Common/Code"
 	"Artemis/Global"
-	"Artemis/Model/UserModel"
+	"Artemis/Model"
 	"gorm.io/gorm"
 )
 
@@ -17,7 +17,7 @@ func New() *UserService {
 	}
 }
 
-func (u *UserService) Example(params ExampleParam) (ex *Code.Exception, data UserModel.User) {
+func (u *UserService) Example(params ExampleParam) (ex *Code.Exception, data Model.User) {
 	ex = &Code.Exception{}
 	err := u.db.Where("id = ?", params.Id).First(&data).Error
 	if err != nil {

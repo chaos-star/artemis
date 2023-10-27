@@ -39,7 +39,7 @@ func FailValidate(err error, c *gin.Context) {
 	response.Message = Code.GetMessage(response.Code, lang)
 	response.Data = gin.H{}
 
-	if trans, ok := c.Get("tran"); ok && errors.As(err, &errs) {
+	if trans, ok := c.Get("translate"); ok && errors.As(err, &errs) {
 		tranErrs := errs.Translate(trans.(ut.Translator))
 		for _, val := range tranErrs {
 			message = val

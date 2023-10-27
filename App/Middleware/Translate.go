@@ -34,7 +34,7 @@ func Translate() gin.HandlerFunc {
 			lang = "zh"
 			_ = zh_trans.RegisterDefaultTranslations(binding.Validator.Engine().(*validator.Validate), langInst)
 		}
-		c.Set("tran", langInst)
+		c.Set("translate", langInst)
 		fmt.Println(lang)
 		c.Next()
 	}
